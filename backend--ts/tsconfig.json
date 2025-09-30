@@ -1,0 +1,41 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Target and Module System
+    "target": "ES2020",           // Modern JS for Node.js 14+
+    "module": "CommonJS",         // Node.js default module system
+
+    // Type Checking & Safety
+    "strict": true,                       // Enable all strict options
+    "noUncheckedIndexedAccess": true,    // Safer object indexing
+    "exactOptionalPropertyTypes": true,  // Precise optional props
+
+      // Style Options
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    // Module Resolution & Compatibility
+    "esModuleInterop": true,      // Allow default imports from CommonJS
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,         // Skip declaration file checks for faster builds
+
+    // Output Options
+    "sourceMap": true,            // Generate source maps for debugging
+    "declaration": true,          // Generate .d.ts files (useful if you publish this lib)
+    "declarationMap": true,       // Source maps for declarations
+
+    // Include Node.js types globally
+    "types": ["node"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "tests"]
+}
